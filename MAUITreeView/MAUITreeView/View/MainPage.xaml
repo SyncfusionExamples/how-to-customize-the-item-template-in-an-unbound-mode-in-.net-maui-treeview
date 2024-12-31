@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
+             xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView"
+             xmlns:local="clr-namespace:MAUITreeView"
+             x:Class="MAUITreeView.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:TextColorConverter x:Key="textColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <syncfusion:SfTreeView x:Name="treeView" ItemHeight="25">
+            <syncfusion:SfTreeView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Label Text="{Binding Content}" TextColor="{Binding Level, Converter={StaticResource textColorConverter}}" VerticalOptions="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </syncfusion:SfTreeView.ItemTemplate>
+
+            <syncfusion:SfTreeView.Nodes>
+                <treeviewengine:TreeViewNode Content="Australia" IsExpanded="True">
+                    <treeviewengine:TreeViewNode.ChildNodes>
+                        <treeviewengine:TreeViewNode Content="New South Wales">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Sydney"/>
+                                <treeviewengine:TreeViewNode Content="Canberra"/>
+                                <treeviewengine:TreeViewNode Content="Newcastle–Maitland"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Victoria">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Melbourne"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Queensland">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Brisbane"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="West Australia">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Perth"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="South Australia">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Adelaide"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                    </treeviewengine:TreeViewNode.ChildNodes>
+                </treeviewengine:TreeViewNode>
+                <treeviewengine:TreeViewNode Content="Brazil" IsExpanded="True">
+                    <treeviewengine:TreeViewNode.ChildNodes>
+                        <treeviewengine:TreeViewNode Content="São Paulo">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="São Paulo"/>
+                                <treeviewengine:TreeViewNode Content="Campinas"/>
+                                <treeviewengine:TreeViewNode Content="Sorocaba"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Rio de Janeiro"/>
+                        <treeviewengine:TreeViewNode Content="Minas Gerais">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Belo Horizonte"/>
+                                <treeviewengine:TreeViewNode Content="Distrito Federal e Entorno (Brasilia)"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Ceará">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Fortaleza"/>
+                                <treeviewengine:TreeViewNode Content="Caucaia"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Paraná">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Curitiba"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                    </treeviewengine:TreeViewNode.ChildNodes>
+                </treeviewengine:TreeViewNode>
+                <treeviewengine:TreeViewNode Content="China" IsExpanded="True">
+                    <treeviewengine:TreeViewNode.ChildNodes>
+                        <treeviewengine:TreeViewNode Content="Guangdong">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Guanghou"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Jingjinji">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Beijing"/>
+                                <treeviewengine:TreeViewNode Content="Tianjin"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Yangtze River Delta">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Shanghai"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Chengyu">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Chongqing"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Zhejiang Province">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Hangzhou"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                    </treeviewengine:TreeViewNode.ChildNodes>
+                </treeviewengine:TreeViewNode>
+                <treeviewengine:TreeViewNode Content="United States of America" IsExpanded="True">
+                    <treeviewengine:TreeViewNode.ChildNodes>
+                        <treeviewengine:TreeViewNode Content="New York"/>
+                        <treeviewengine:TreeViewNode Content="California">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Los Angeles"/>
+                                <treeviewengine:TreeViewNode Content="San Jose"/>
+                                <treeviewengine:TreeViewNode Content="San Francisco"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Illinois">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Chicago"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Texas">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Houston"/>
+                                <treeviewengine:TreeViewNode Content="San Antonio"/>
+                                <treeviewengine:TreeViewNode Content="Dallas"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Pennsylvania">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Philadelphia"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                    </treeviewengine:TreeViewNode.ChildNodes>
+                </treeviewengine:TreeViewNode>
+                <treeviewengine:TreeViewNode Content="India" IsExpanded="True">
+                    <treeviewengine:TreeViewNode.ChildNodes>
+                        <treeviewengine:TreeViewNode Content="Delhi">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="New Delhi"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Maharashtra">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Mumbai"/>
+                                <treeviewengine:TreeViewNode Content="Pune"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="West Bengal">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Kolkatta"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Karnataka">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Bangalore"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                        <treeviewengine:TreeViewNode Content="Tamil Nadu">
+                            <treeviewengine:TreeViewNode.ChildNodes>
+                                <treeviewengine:TreeViewNode Content="Chennai"/>
+                            </treeviewengine:TreeViewNode.ChildNodes>
+                        </treeviewengine:TreeViewNode>
+                    </treeviewengine:TreeViewNode.ChildNodes>
+                </treeviewengine:TreeViewNode>
+            </syncfusion:SfTreeView.Nodes>
+        </syncfusion:SfTreeView>
+    </Grid>
+</ContentPage>
